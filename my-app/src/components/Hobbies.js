@@ -1,9 +1,10 @@
 import React from 'react'
+import './Hobbies.css'
 
 const Hobbies = (props) => {
     const { hobbiesUrl } = props
     return(
-        <img src={hobbiesUrl}/>
+        <img className="hobbies" src={hobbiesUrl}/>
     )
 }
 

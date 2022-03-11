@@ -1,5 +1,4 @@
 import PersonCard from './components/PersonCard'
-
 import './App.css';
 
 const getData = () => {
@@ -30,12 +29,15 @@ function App() {
     if (person.name === 'Adam') {
       updatedPerson.age = 32
       updatedPerson.hobbiesUrl = 'https://npr.brightspotcdn.com/dims4/default/95997a5/2147483647/strip/true/crop/2000x1050+0+138/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fwesa%2Ffiles%2F201901%2F010419_disc_golf_2.jpg'
+      updatedPerson.emoji = "👨🏻‍❤️‍👩🏿"
     } else if (person.name === 'Carlton') {
       updatedPerson.age = 33
       updatedPerson.hobbiesUrl = 'https://www.contiki.com/six-two/wp-content/uploads/2021/01/Queens-Gambit-Netflix.jpg'
+      updatedPerson.emoji =  "⚜️"
     } else {
       updatedPerson.age = 37
       updatedPerson.hobbiesUrl ='https://www.rochesterfirst.com/wp-content/uploads/sites/66/2020/08/Smoking-weed-marijuana-420.jpg'
+      updatedPerson.emoji =  "🤓"
     }
     return updatedPerson
   })
@@ -44,10 +46,10 @@ function App() {
     <div className="App">
       {
         peopleArray.map((person) => {
-          const { name, picture, description, age, hobbiesUrl } = person
+          const { name, picture, description, age, hobbiesUrl , emoji} = person
           return (
             <div>
-              <PersonCard name={name} picture={picture} description={description} age={age} hobbiesUrl={hobbiesUrl} />
+              <PersonCard name={name} picture={picture} description={description} age={age} hobbiesUrl={hobbiesUrl} emoji={emoji}/>
             </div>
           )
         })
