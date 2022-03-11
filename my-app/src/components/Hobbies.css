@@ -1,5 +1,12 @@
 .hobbies {
   height: 200px;
   width: 200px;
+  margin: 5px;
+  padding: 5px;
+  border: 2px solid red;
+  border-radius: 3px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
