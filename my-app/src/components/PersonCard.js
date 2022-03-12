@@ -4,6 +4,7 @@ import Hobbies from './Hobbies'
 import './Hobbies.css'
 import './PersonCard.css'
 import Image from './Image'
+import Description from './Description';
 
 const PersonCard = ({ name, picture, description,age,hobbiesUrl, emoji}) => {
   return (
@@ -14,8 +15,7 @@ const PersonCard = ({ name, picture, description,age,hobbiesUrl, emoji}) => {
         </h1>
         <Image source={picture}/>
         <Hobbies className="hobbies" hobbiesUrl={hobbiesUrl}/>
-        <p>{description}</p>
-        <b>{age}</b>
+        <Description className="description" description={description} age={age}/>
     </div>
   )
 }

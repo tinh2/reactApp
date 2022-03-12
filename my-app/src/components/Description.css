@@ -1,0 +1,7 @@
+.description {
+    border: solid 3px black;
+    width: 300px;
+    height: auto;
+    border-radius: 10px;
+    margin: 10px;
+}
