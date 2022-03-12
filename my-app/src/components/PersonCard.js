@@ -3,7 +3,7 @@ import PenisIcon from './PenisIcon'
 import Hobbies from './Hobbies'
 import './Hobbies.css'
 
-const PersonCard = ({ name, picture, description,age,hobbiesUrl, emoji}) => {
+const PersonCard = ({ name, picture, description, age, hobbiesUrl, emoji}) => {
   return (
     <div style={{ border: "3px solid green" }}>
         <h1>
@@ -11,7 +11,7 @@ const PersonCard = ({ name, picture, description,age,hobbiesUrl, emoji}) => {
           <PenisIcon text={emoji} />
         </h1>
         <img src={picture}/>
-        <Hobbies className="hobbies" hobbiesUrl={hobbiesUrl}/>
+        <Hobbies className="hobbies" hobbiesUrl={hobbiesUrl} />
         <p>{description}</p>
         <b>{age}</b>
     </div>

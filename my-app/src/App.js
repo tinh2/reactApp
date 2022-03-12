@@ -17,6 +17,11 @@ const getData = () => {
       name: 'Tho',
       picture: 'https://media.istockphoto.com/photos/successful-asian-businessman-in-a-modern-coworking-space-picture-id1143933272?k=20&m=1143933272&s=612x612&w=0&h=UIak73zWVjoGHtAYtecrsskju7yxMgh1-vd5xDuqEeg=',
       description: 'van lifer'
+    },
+    {
+      name: 'Benjamin',
+      picture: 'https://image.cnbcfm.com/api/v1/image/101523638-Headshot-BG-Brown-copy.jpg?v=1416000103&w=400&h=300',
+      description: 'I like mayonaise'
     }
   ]
 }
@@ -26,18 +31,34 @@ function App() {
     let updatedPerson = {
       ...person,
     }
-    if (person.name === 'Adam') {
-      updatedPerson.age = 32
-      updatedPerson.hobbiesUrl = 'https://npr.brightspotcdn.com/dims4/default/95997a5/2147483647/strip/true/crop/2000x1050+0+138/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fwesa%2Ffiles%2F201901%2F010419_disc_golf_2.jpg'
-      updatedPerson.emoji = "👨🏻‍❤️‍👩🏿"
-    } else if (person.name === 'Carlton') {
-      updatedPerson.age = 33
-      updatedPerson.hobbiesUrl = 'https://www.contiki.com/six-two/wp-content/uploads/2021/01/Queens-Gambit-Netflix.jpg'
-      updatedPerson.emoji =  "⚜️"
-    } else {
-      updatedPerson.age = 37
-      updatedPerson.hobbiesUrl ='https://www.rochesterfirst.com/wp-content/uploads/sites/66/2020/08/Smoking-weed-marijuana-420.jpg'
-      updatedPerson.emoji =  "🤓"
+
+    switch (person.name) {
+      case 'Adam':
+        updatedPerson.age = 32
+        updatedPerson.hobbiesUrl = 'https://npr.brightspotcdn.com/dims4/default/95997a5/2147483647/strip/true/crop/2000x1050+0+138/resize/1200x630!/quality/90/?url=http%3A%2F%2Fnpr-brightspot.s3.amazonaws.com%2Flegacy%2Fsites%2Fwesa%2Ffiles%2F201901%2F010419_disc_golf_2.jpg'
+        updatedPerson.emoji = "👨🏻‍❤️‍👩🏿"
+
+        break;
+      case 'Carlton': 
+        updatedPerson.age = 33
+        updatedPerson.hobbiesUrl = 'https://www.contiki.com/six-two/wp-content/uploads/2021/01/Queens-Gambit-Netflix.jpg'
+        updatedPerson.emoji =  "⚜️"
+
+        break;
+      case 'Tho': 
+        updatedPerson.age = 37
+        updatedPerson.hobbiesUrl ='https://www.rochesterfirst.com/wp-content/uploads/sites/66/2020/08/Smoking-weed-marijuana-420.jpg'
+        updatedPerson.emoji =  "🤓"
+
+        break;
+      case 'Benjamin': 
+        updatedPerson.age = 22
+        updatedPerson.hobbiesUrl ='https://www.rochesterfirst.com/wp-content/uploads/sites/66/2020/08/Smoking-weed-marijuana-420.jpg'
+        updatedPerson.emoji =  "😂"
+
+        break;
+      default: 
+        break;
     }
     return updatedPerson
   })
